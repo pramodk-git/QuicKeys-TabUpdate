@@ -1,0 +1,42 @@
+{
+   "manifest_version" : 2,
+   "name"             : "QuicKeys-TabUpdates",
+   "version"          : "0.1",
+
+   "description"      : "Open source chrome extension to add Keyboard Shortcuts. Unfortunately chrome extensions can only support upto 4 keyboard shortcuts. A series of extensions will be made available to support more features.",
+ 
+   "browser_action"   : {
+      "default_title" : "Tab Update Shortcuts!"
+   },
+ 
+   "author"           : "pramodk",
+   // Register event page
+   "background"       : {
+      "persistent"    : false,
+      "scripts"       : ["tabUpdateHandler.js"]
+   },
+   "homepage_url"     : "https://github.com/pramodk-git",
+   "offline_enabled"  : true,
+
+    // Supported commands
+    "commands"               : {
+       "Pin-Unpin-Tab"       : {
+          "suggested_key"    : {
+             "default"       : "Alt+Shift+P"
+          },
+          "description"      : "Pin or Unpin active tab"
+       },
+       "Dupe-Tab"            : {
+          "suggested_key"    : {
+             "default"       : "Alt+Shift+D"
+          },
+          "description"      : "Duplicate active tab"
+       },
+       "Mute-Unmute-Tab"     : {
+          "suggested_key"    : {
+             "default"       : "Alt+Shift+M"
+          },
+          "description"      : "Mute or Unmute active tab"
+       }
+    }
+}
